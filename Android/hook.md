@@ -2,6 +2,53 @@
 
 frida, hluda, florida
 
+Check kiến trúc để tải đúng ver: https://github.com/frida/frida/releases
+
+```
+# uname -m
+
+"aarch64" is 64-bit ARMv8-A, which is Android's "arm64-v8a" ABI.
+"armv7l" is 32-bit ARMv7-A, which is Android's "armeabi-v7a" ABI.
+"x86_64" is 64-bit x86, which is Android's "x86_64" ABI.
+"i386" or "i686" are the basic 32-bit x86 or the Pentium Pro variant respectively, which is Android's "x86" ABI.
+```
+
+<img width="1078" height="287" alt="image" src="https://github.com/user-attachments/assets/b2d9cc7d-4018-48fc-be3a-8d6ded47feda" />
+
+Frida server thường hay adb push vào `data/local/tmp` trong điện thoại, rồi chạy frida server lên thôi `./frida-server-name &`, dấu `&` để chạy ngầm:
+
+<img width="1184" height="276" alt="image" src="https://github.com/user-attachments/assets/62236a11-c55d-4e39-b576-0302f10ec3a2" />
+
+Forward port
+
+```
+./frida-server -l 0.0.0.0:1337 &
+```
+
+Cài frida client ở máy tính:
+
+```
+pip3 install frida==<version> & frida-tools==<version>
+frida --version
+frida-ps --version
+```
+
+Client chạy:
+
+```
+frida -U -f <package_name> -l <scrip_path>  -> chạy thường connect qua usb debug
+frida -H ip:1337 ...   -> chạy forward port
+```
+
+Mở app lên và check các package apk đang chạy:
+
+```
+frida-ps -Ua
+```
+
+<img width="828" height="287" alt="image" src="https://github.com/user-attachments/assets/13e293e9-24f5-4b95-a5d1-067528ce9b75" />
+
+
 ## 2. Hook Java
 
 Sử dụng jadx decompile apk > Chuột phải vào hàm cần hook > Copy as frida code
