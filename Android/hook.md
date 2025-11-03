@@ -198,5 +198,5 @@ setImmediate(main);
 
 ## Tham khảo
 
-https://viblo.asia/p/hook-android-native-phan-1-yZjJYjjpLOE
-https://eternalsakura13.com/2020/07/04/frida/
+- https://viblo.asia/p/hook-android-native-phan-1-yZjJYjjpLOE
+- https://eternalsakura13.com/2020/07/04/frida/
