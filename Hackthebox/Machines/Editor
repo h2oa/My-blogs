@@ -1,8 +1,0 @@
-Linux - Easy
-
-Nmap:
-
-```
-nmap -sC -sV 10.10.11.80
-```
-
