@@ -28,4 +28,4 @@ Hóa ra 10610 chính là version, chắc là 1.6.10? Check trong index.php có:
 
 Thử các kiểu reverse shell không được, dùng msfconsole được, lệnh chạy lỗi hết, lý do shell không reverse được:
 
-Sử dụng password của tyler `su tyler` đọc được user.txt
+Sử dụng password của tyler `su tyler` switch sang tyler.
