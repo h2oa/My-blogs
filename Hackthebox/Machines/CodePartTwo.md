@@ -56,7 +56,26 @@ console.log(output)
 
 <img width="1087" height="153" alt="{077AE69B-92DD-433D-A3DD-34B0F09945A5}" src="https://github.com/user-attachments/assets/bed25308-7157-47e7-a55c-248cbd81a64a" />
 
-User hiện tại là `app`, không vào được user `marco`:
+User hiện tại là `app`, không vào được user `marco`.
 
 <img width="1085" height="278" alt="{95D6AD56-3903-4A39-AD55-C4D7670989C1}" src="https://github.com/user-attachments/assets/0ea71f53-6e85-43f4-a14c-7f933f5bf855" />
+
+<img width="1638" height="382" alt="{D0C932B7-0785-4FF5-8E89-4BEB79868931}" src="https://github.com/user-attachments/assets/877843cb-3f66-4205-a5f2-d76875ad42ac" />
+
+Password trong db hash bằng MD5, không crack được pass của acc `marco`. :)))) ok vừa đi kiếm được hint là phải crack md5 ... 
+
+```
+hashcat -a 0 -m 0 649c9d65a206a75f5abe509fe128bce5 --show
+649c9d65a206a75f5abe509fe128bce5:sweetangelbabylove
+```
+
+<img width="1082" height="174" alt="{EE0CC122-EF5A-4D30-8844-62D330DEEB10}" src="https://github.com/user-attachments/assets/4973f8f0-8f1d-4a95-8845-8f966329da26" />
+
+<img width="1119" height="300" alt="{E013B6A9-EF0A-45B3-BE45-A84A62DABEA3}" src="https://github.com/user-attachments/assets/e94dbcd0-59a2-4c5f-bca4-a43425339a49" />
+
+Check `sudo -l`:
+
+<img width="1232" height="204" alt="{597F7B23-32CD-434D-A9CC-D76162AB0EB1}" src="https://github.com/user-attachments/assets/46b12197-abb0-4750-8d7c-179204fe2b27" />
+
+User có thể thực hiện quyền sudo với file `/usr/local/bin/npbackup-cli`
 
